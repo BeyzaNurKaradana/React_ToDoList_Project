@@ -15,10 +15,11 @@ function App() {
   const [todoInput, setTodoInput] = useState("");
 
   const [todos, setTodos] = useState([]);
-  console.log(todos)
   
+
   return (
-    <InputWrapper>
+    <div>
+      <InputWrapper>
       <Form style={{
         flex:1
       }}>
@@ -32,8 +33,22 @@ function App() {
           type="email" placeholder="name@example.com" />
         </Form.Group>
       </Form>
-      <Button variant="success">Add</Button>
+      <Button
+       onClick={() => {
+
+        setTodos([...todos, todoInput]);
+        
+       }}
+       variant="success">Add</Button>
     </InputWrapper>
+    <ul>
+      {todos.map((todo, index) => (
+        <li key={index}>{todo}</li>
+      ))
+
+      }
+    </ul>
+    </div>
   );
 }
 
