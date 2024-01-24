@@ -10,6 +10,11 @@ const InputWrapper = styled.div`
   padding: 32px;
 `;
 
+const TodoElement = styled.li`
+cursor: pointer;
+list-style-type: circle;
+`
+
 function App() {
   const [todoInput, setTodoInput] = useState("");
 
@@ -38,6 +43,7 @@ function App() {
         <Button
           onClick={() => {
             if (todos.includes(todoInput)) {
+              alert(todoInput +" already added!")
               return;
             }
             setTodos([...todos, todoInput]);
@@ -48,9 +54,9 @@ function App() {
           Add
         </Button>
       </InputWrapper>
-      <ul>
+      <ul className="px-5">
         {todos.map((todo, index) => (
-          <li
+          <TodoElement
             onClick={() => {
               setTodos((oldValues) => {
                 return oldValues.filter(oldTodo => oldTodo !== todo);
@@ -59,7 +65,7 @@ function App() {
             key={index}
           >
             {todo}
-          </li>
+          </TodoElement>
         ))}
       </ul>
     </div>
