@@ -74,6 +74,13 @@
 
 .px-5 {
   margin-left: 6rem;
+  color: #95d8a4;
+  font-size: 2rem;
+  
+}
+ul{
+    display: flex;
+    justify-content: center;
 }
 
 body {
