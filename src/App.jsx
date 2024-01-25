@@ -22,10 +22,10 @@ function App() {
 
   return (
     
-    <div>
+    <div >
 
-    <header className="header">
-      <h2> To Do List App</h2>
+    <header>
+      <h1 className="header"> TO DO LIST </h1>
       
     </header>
     
