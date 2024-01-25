@@ -36,7 +36,7 @@ function App() {
           }}
         >
           <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label>Add Your Goals</Form.Label>
+            <Form.Label className="goals-form">Add Your Goals</Form.Label>
             <Form.Control
               onChange={(e) => {
                 setTodoInput(e.target.value);
@@ -48,6 +48,7 @@ function App() {
           </Form.Group>
         </Form>
         <Button
+        className="custom-btn btn-13"
           onClick={() => {
             if (todos.includes(todoInput)) {
               alert(todoInput +" already added!")
