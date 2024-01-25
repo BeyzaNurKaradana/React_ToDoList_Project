@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Button, Form } from "react-bootstrap";
+import { Button, Container, Form } from "react-bootstrap"; 
 import styled from "styled-components";
 
 const InputWrapper = styled.div`
@@ -21,22 +21,29 @@ function App() {
   const [todos, setTodos] = useState([]);
 
   return (
+    
     <div>
-      <InputWrapper>
+
+    <header className="header">
+      <h2> To Do List App</h2>
+      
+    </header>
+    
+      <InputWrapper className="wrapper">
         <Form
           style={{
             flex: 1,
           }}
         >
           <Form.Group controlId="exampleForm.ControlInput1">
-            <Form.Label>Target</Form.Label>
+            <Form.Label>Add Your Goals</Form.Label>
             <Form.Control
               onChange={(e) => {
                 setTodoInput(e.target.value);
               }}
               value={todoInput}
               type="email"
-              placeholder="name@example.com"
+              placeholder="reading book, study, work out etc."
             />
           </Form.Group>
         </Form>
@@ -54,6 +61,7 @@ function App() {
           Add
         </Button>
       </InputWrapper>
+      
       <ul className="px-5">
         {todos.map((todo, index) => (
           <TodoElement
@@ -69,6 +77,7 @@ function App() {
         ))}
       </ul>
     </div>
+    
   );
 }
 

@@ -1,0 +1,15 @@
+.wrapper{
+    align-items: center;
+    justify-content: center;
+    display: flex;  
+    margin-top: 8rem; 
+    margin-right:6rem;
+    margin-left: 6rem; 
+}
+
+.header{
+    text-align: center;
+    margin-top: 6rem;
+    color:#198754 ;
+}
+
